@@ -27,7 +27,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
 
 const DiaryList = ({ diaryList }) => {
     const navigate = useNavigate();
-    const [sortType, setSortType] = useState('lastest');
+    const [sortType, setSortType] = useState('latest');
     const [filter, setFilter] = useState('all');
 
     // 원본 배열을 바꾸지 않기 위한 List 복사 작업(sort 메소드를 사용하면 원본 배열이 바뀌기 때문에!)
