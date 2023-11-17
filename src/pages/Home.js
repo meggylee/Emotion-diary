@@ -17,7 +17,7 @@ const Home = () => {
         // 리스트가 있을때만 수행
         if (diaryList.length >= 1) {
             const firstDay = new Date(curDate.getFullYear(), curDate.getMonth(), 1).getTime();
-            const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0).getTime();
+            const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0, 23, 59, 59).getTime(); // 마지막날의 마지막 시,분 ,초 까지  설정해 줘야 한다.
 
             setData(diaryList.filter((it) => firstDay <= it.date && it.date <= lastDay));
         }
